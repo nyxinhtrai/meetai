@@ -5,7 +5,6 @@ import { headers } from "next/headers";
 import { caller } from "@/trpc/server";
 
 const Page = async () => {
-  const data = await caller.hello({ text: "Ny nguyen server" });
 
   const session = await auth.api.getSession({
     headers: await headers(),
